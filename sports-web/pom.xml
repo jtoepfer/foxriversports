@@ -2,14 +2,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
 	<modelVersion>4.0.0</modelVersion>
-
 	<parent>
 		<groupId>org.sports</groupId>
 		<artifactId>sports</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>	
-
 	<artifactId>sports-web</artifactId>
 	<packaging>war</packaging>
 	<name>Sports Application - Web (Spring MVC)</name>
@@ -27,18 +25,6 @@
 					<target>1.7</target>
 				</configuration>
 			</plugin>
-			<!-- Deploy to Remote Tomcat 
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <url>http://localhost/manager/text</url>
-                    <server>TomcatServer</server>
-                    <path>/foxriversports</path>
-                    <update>true</update>
-                </configuration>
-            </plugin>-->
             <plugin>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>2.6</version>
@@ -143,11 +129,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
-		<dependency>
+		<!--<dependency>
 			<groupId>org.sitemesh</groupId>
 			<artifactId>sitemesh</artifactId>
 			<version>${sitemesh-version}</version>
-		</dependency>
+		</dependency>-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
@@ -216,30 +202,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-<!--         <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery-cookie</artifactId>
-            <version>1.3.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootswatch</artifactId>
-            <version>3.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap-datepicker</artifactId>
-            <version>1.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery</artifactId>
-            <version>1.8.3</version>
-        </dependency>  -->
 	</dependencies>
 
     <reporting>

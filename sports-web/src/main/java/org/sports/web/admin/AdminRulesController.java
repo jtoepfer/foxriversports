@@ -1,4 +1,4 @@
-package org.foxriversports.web.admin;
+package org.sports.web.admin;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

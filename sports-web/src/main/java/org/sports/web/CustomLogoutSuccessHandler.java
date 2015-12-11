@@ -1,4 +1,4 @@
-package org.foxriversports.web;
+package org.sports.web;
 
 import java.io.IOException;
 
