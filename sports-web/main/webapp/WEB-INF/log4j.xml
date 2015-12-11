@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false" xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+    <appender name="logfile-main" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${catalina.base}/logs/foxriversports.log"/>
+        <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%p %d [%c] - %m%n"/>
+        </layout>
+    </appender>
+    
+    <appender name="logfile-web" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${catalina.base}/logs/foxriversports-web.log"/>
+        <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%p %d [%c] - %m%n"/>
+        </layout>
+    </appender> 
+
+    <appender name="logfile-sec" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="${catalina.base}/logs/foxriversports-security.log"/>
+        <param name="MaxFileSize" value="5MB"/>
+        <param name="MaxBackupIndex" value="8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%p %d [%c] - %m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="org.foxriversports" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="logfile-main"/>
+    </logger>
+    
+    <logger name="com.fasterxml.jackson" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="logfile-main"/>
+    </logger>
+    
+    <logger name="org.springframework" additivity="false">
+    	<level value="debug"/>
+    	<appender-ref ref="logfile-main"/>
+    </logger>
+    
+    <logger name="org.springframework.web" additivity="false">
+    	<level value="trace"/>
+    	<appender-ref ref="logfile-web"/>
+    </logger>
+
+    <logger name="org.springframework.beans" additivity="false">
+    	<level value="debug"/>
+    	<appender-ref ref="logfile-main"/>
+    </logger>
+    
+    <logger name="org.springframework.security" additivity="false">
+    	<level value="trace"/>
+    	<appender-ref ref="logfile-sec"/>
+    </logger>
+    
+    <root>
+    	<priority value="trace"/>
+    	<appender-ref ref="logfile-main"/>
+    </root>
+
+</log4j:configuration>

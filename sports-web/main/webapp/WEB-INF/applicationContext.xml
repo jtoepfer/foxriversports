@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        			    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+        			    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<description>
+		This is the main spring context configuration for the spring application.
+	</description>
+	
+	<import resource="spring-app-context.xml"/>
+	<import resource="spring-jdbc-datasource.xml"/>
+	<import resource="spring-app-security.xml"/>
+	
+	<!-- Register all the Annotation BeanPostProcessor's, to enable annotation-driven auto-wiring: 
+	<context:annotation-config /> -->
+
+   	<!-- Scan for components -->
+	<context:component-scan base-package="org.foxriversports.model
+	                                    , org.foxriversports.services"/>
+	
+</beans>

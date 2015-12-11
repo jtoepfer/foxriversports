@@ -1,0 +1,11 @@
+<!DOCTYPE dataset SYSTEM "dataset.dtd">
+<dataset>
+    <table name="sometable">
+        <column>id</column>
+        <column>username</column>
+        <row>
+            <value>-1</value>
+            <value>user</value>
+        </row>
+    </table>
+</dataset>
