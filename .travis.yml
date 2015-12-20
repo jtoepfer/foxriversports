@@ -3,4 +3,9 @@ script: mvn clean package -DskipTests=true
 jdk:
   - oraclejdk7
   - oraclejdk8
-  
+deploy:
+  provider: openshift
+  user: joshua.toepfer@gmail.com
+  password:
+  	secure: "LkuqKqThDbOhmgG9HDw8BdCqJnHvD6abmzDF0R5z4prydBLzX257X8EYk6/8g6LR7jHG24TuIDuAw9BRvxdckGRDAF1ajP2ZV9+8DwqRhyHL8SJTpAYijDoYY8YVzYt65MB5cOGLdQTvizijKFRk6kJak6hMoblSETlkAr4OTDuMc7kfpqtQCzJje9gxX+lg2A6CZ3rU7d3gOrwD5kUlyr4B4Po2IV0Y2LafLl7pzb4xByGTu82RcH8dojZhtIt46kvO8sKjAgj7eiaqUFltucTU18Uajms5/hbB2ve52ILdyXJ7ERAXlMV94mCUpc65p2zjIw+ZYqWtjW59XVFRNFZE5W4NnA69IBGviDZJhM+EO7tZw8f4a46vrbsz5Ste8rlSye/w4JBkxzGy92jhsAv3CYNvIBUIgMnVojea0V5vbSsMxVi1llr2z9VUfO49/LW8vTaA9OSQ4LyOvt/O7LAi9BVGUcxnWBQalYjY/wHZzh+lrqiHpMQvo82Ktlvdu8KYM438aK6NjEfAyRWewbcxzqLhy1jm3o3+GLPuQD2wp8O8X3n2B93gBRgv4p2P+NiOic86KJgh+AiLkh13oiWb15Ujg+KocZKW6QJxFevc+/BH2Dx5gLI5L/fV8deI+/5+y67OpR+8AuKtHD2YACAlXpIczL67+OCOEKGUxiY="
+  domain: sportsws.rhcloud.com
