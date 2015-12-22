@@ -41,7 +41,7 @@
 							<Implementation-Version>${JIRA_VERSION}_b${BUILD_NUMBER}</Implementation-Version> 
 				    	</manifestEntries>
                     </archive>
-                    <outputDirectory>C:/tools/apache-tomcat-7.0.55/webapps</outputDirectory>
+                    <!-- <outputDirectory>C:/tools/apache-tomcat-7.0.55/webapps</outputDirectory> -->
                 </configuration>
             </plugin>
         </plugins>
